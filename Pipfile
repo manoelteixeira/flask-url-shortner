@@ -10,6 +10,8 @@ flask-sqlalchemy = "*"
 python-dotenv = "*"
 
 [dev-packages]
+pytest = "*"
+bpython = "*"
 
 [requires]
 python_version = "3.10"
