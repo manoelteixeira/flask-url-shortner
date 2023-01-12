@@ -1,0 +1,29 @@
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+.content-wrapper h1{
+    text-align: center;
+}
+
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.form-wrapper form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.form-wrapper form input[type=submit]{
+    width: fit-content;
+    font-weight: bolder;
+    margin: 1em auto;
+}

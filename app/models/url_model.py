@@ -2,6 +2,8 @@ from datetime import datetime
 from app import db 
 
 class Url(db.Model):
+    __tablename__ = "url"
+    
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.String(), index=True, unique=False, nullable=False)
     key = db.Column(db.String(), index=True, unique=False, nullable=False)

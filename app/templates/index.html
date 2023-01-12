@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title%}Flask URL Shortner{% endblock %}
+
+{% block content %}
+    <h1>Generate Short URL</h1>
+    <section class="form-wrapper">
+        <form method="post" action="{{url_for('shortner.add_url')}}">
+            {{form.hidden_tag()}}
+            <!-- {{form.url.label}} -->
+            {{form.url(placeholder='Original URL')}}
+            {{form.submit()}}
+        </form>
+    </section>
+    
+    <section class="short-url">
+        {% for message  in get_flashed_messages(category_filter=('short-url')) %}
+            <div> {{request.url}}{{message}}</div>
+            
+        {% endfor %}
+    </section>
+{% endblock %}
+
+
