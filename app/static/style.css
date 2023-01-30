@@ -1,0 +1,60 @@
+header h1{
+    text-align: center;
+}
+
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.content-wrapper h1{
+    text-align: center;
+}
+
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.form-wrapper form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.form-wrapper form input[type=submit]{
+    width: fit-content;
+    font-weight: bolder;
+    margin: 1em auto;
+}
+
+.flash{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 5%;
+}
+
+.flash-info{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    color: red
+}
+
+.short-url{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    
+}
