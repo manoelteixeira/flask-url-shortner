@@ -13,12 +13,20 @@
         </form>
     </section>
     
+{% endblock %}
+
+
+{% block flash %}
     <section class="short-url">
         {% for message  in get_flashed_messages(category_filter=('short-url')) %}
-            <div> {{request.url}}{{message}}</div>
+            <span class="short-url">{{request.url}}{{message}}</span>
+            
+        {% endfor %}
+    </section>
+    <section class="short-url">
+        {% for message  in get_flashed_messages(category_filter=('info')) %}
+            <span class="flash-info">{{message}}</span>
             
         {% endfor %}
     </section>
 {% endblock %}
-
-

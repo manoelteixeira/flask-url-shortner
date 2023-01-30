@@ -1,4 +1,4 @@
-from flask import Blueprint, flash, render_template, url_for, redirect
+from flask import Blueprint, flash, url_for, redirect
 from sqlalchemy.exc import IntegrityError
 from app import db
 from app.forms import UrlForm
@@ -18,6 +18,11 @@ def add_url():
     form = UrlForm()
     if form.validate_on_submit():
         original_url = form.url.data
+        url = UrlModel.query.filter_by(url=original_url).first()
+        if url:
+            flash(message=url.key,
+                  category='short-url')
+            return redirect(url_for('index.index'))
         key = get_key(size=7)
         new_url = UrlModel(original_url, key)
         try:

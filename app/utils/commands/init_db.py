@@ -31,23 +31,7 @@ def init_db():
         tables = inspector.get_table_names()
         if len(tables) == 1 and 'url' in tables:
             print(f'{Fore.GREEN}<<  Done  >>')
+        else:
             print(f'{Fore.RED}<<  Something Whent Wrong. Database not initialized.  >>')
     
-    
-        
-
-# @click.command('init-db')
-# def init_db():
-#     '''
-#     Usage: $> Flask init-db 
-#     Drop all tables if any exists and create new tables.
-#     '''
-    
-#     inspector = db.inspect(db.engine)
-#     tables = inspector.get_table_names()
-#     if len(tables) > 0:
-#         print('\n-=-=-=-=-\nDropping all existing tables.')
-#         db.drop_all()
-#     print('-=-=-=-=-\nCreating tables.\n-=-=-=-=-\n')
-#     db.create_all()
     
